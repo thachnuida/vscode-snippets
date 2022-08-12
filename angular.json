@@ -1,0 +1,28 @@
+{
+	"Angular Component With Destroy Subject": {
+		"prefix": "a-component-destroy",
+		"description": "Angular component With Destroy subject",
+		"body": [
+		  "import { Component, OnInit, OnDestroy } from '@angular/core';",
+		  "import { Subject, takeUntil } from 'rxjs';",
+		  "",
+		  "@Component({",
+		  "\tselector: '${1:selector-name}',",
+		  "\ttemplateUrl: '${2:name}.component.html'",
+		  "})",
+		  "",
+		  "export class ${3:Name}Component implements OnInit, OnDestroy {",
+		  "\tdestroy$ = new Subject();",
+		  "",
+		  "\tconstructor() { }",
+		  "",
+		  "\tngOnInit() { }$0",
+		  "",
+		  "\tngOnDestroy(){",
+		  "\t\tthis.destroy$.next(true);",
+		  "\t\tthis.destroy$.complete();",
+		  "\t}",
+		  "}"
+		]
+	  }
+}
