@@ -24,5 +24,23 @@
 		  "\t}",
 		  "}"
 		]
-	  }
+	},
+	"Angular Ngrx Effect": {
+		"prefix": "a-ngrx-effect",
+		"description": "Angular Ngrx Effect",
+		"body": [
+			"import { Injectable } from '@angular/core';",
+			"import { Actions, createEffect, ofType } from '@ngrx/effects';",
+			"import { Action } from '@ngrx/store';",
+			"import { catchError, EMPTY, mergeMap, of } from 'rxjs';",
+			"import * as ${1:Name}Actions from './${2:name}.actions';",
+			"",
+			"@Injectable()",
+			"export class ${1:Name}Effects {",
+			"\tconstructor(",
+			"\t\tprivate actions$: Actions,",				
+			"\t) {}",
+			"}"
+		]
+	},
 }
